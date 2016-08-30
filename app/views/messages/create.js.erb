@@ -1,0 +1,6 @@
+$('#messages').html("<%= j (render @messages) %>");
+$('#flash').html("<%= j (render 'shared/flash_alert') %>");
+$('#flash').fadeIn(500)
+$('.glyphicon-remove').click(function(){
+    $(this).parent().hide()
+});

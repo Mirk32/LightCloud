@@ -1,0 +1,62 @@
+
+form{
+  text-align: center;
+  textarea{
+    width: 100%;
+    height: 99px;
+  }
+  .post{
+    margin: 15px 15px 0 0 ;
+  }
+}
+
+p{
+  word-wrap: break-word;
+}
+
+.well{
+  margin-top: 32px;
+  .message{
+    padding-left: 36px;
+  }
+}
+
+.glyphicon-remove{
+  cursor: pointer;
+}
+
+#flash{
+  display: none;
+}
+
+#facebook_loggin_button{
+    width: 20%;
+    margin-top: 21%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 11px;
+}
+
+.default-avatar{
+  width: 67px;
+}
+
+.row >h3{
+  color: #104c05;
+  font-size: 28px;
+}
+
+.btn.pull-right, .btn{
+  font-size: 18px;
+  padding: 3px 20px;
+  margin-right: 16px;
+
+}
+.well.row{
+  padding: 19px 19px 8px 19px;
+}
+
+h3 form{
+  display: inline-block;
+  margin-left: 30px;
+}

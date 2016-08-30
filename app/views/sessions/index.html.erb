@@ -3,6 +3,6 @@
       Signed in as <%=image_tag current_user.cover_image  %> <strong><%= current_user.name %></strong>!
       <%= link_to "Sign out", sign_out_path, method: "delete" %>
   <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", target: '_blank' %>
+      <%= button_to "Sign in via Facebook", "/auth/facebook", target: '_blank', id: 'facebook_loggin_button',class: 'btn btn-primary' %>
   <% end %>
 </div>

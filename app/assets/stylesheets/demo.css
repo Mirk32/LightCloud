@@ -28,10 +28,10 @@ a{
 a:hover{
 	color: #000;
 }
-.container{
-	width: 100%;
-	position: relative;
-}
+/*.container{*/
+	/*width: 100%;*/
+	/*position: relative;*/
+/*}*/
 .clr{
 	clear: both;
 	padding: 0;

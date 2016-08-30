@@ -1,0 +1,14 @@
+<div class="well row">
+  <div class="col-sm-1">
+    <%=image_tag avatar_get(message.user), class:'default-avatar'  %>
+  </div>
+  <div class="col-sm-11 col-sm-offset-0 message">
+    <span class="text-muted"><strong><%= message.user.name %></strong> on
+      <%= l(message.created_at, format: '%B, %d %Y %H:%M:%S') %>
+    </span>
+      <p><%= message.content %></p>
+  </div>
+  <div class="pull-left">
+    <a href="#">Reply</a>
+  </div>
+</div>

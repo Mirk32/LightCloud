@@ -1,0 +1,12 @@
+<% if object.errors.any? %>
+    <div class="bg-warning alert-error">
+      <h3 class="text-danger">
+        Form contains <%= pluralize(object.errors.size, 'error') %>
+      </h3>
+      <% object.errors.full_messages.each do |msg| %>
+          <ul class="text-danger">
+            <li><%= msg%></li>
+          </ul>
+      <% end %>
+    </div>
+<% end %>

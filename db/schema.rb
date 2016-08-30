@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160830050605) do
 
   create_table "messages", force: true do |t|
     t.integer  "user_id"
-    t.string   "content"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
