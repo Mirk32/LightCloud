@@ -2,7 +2,7 @@ LightCloud::Application.routes.draw do
   resources :sessions
   resources :messages
 
-  root 'sessions#index'
+  root 'messages#index'
 
   match '/login', to: 'sessions#index', via: 'get'
 
