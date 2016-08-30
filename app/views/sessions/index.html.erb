@@ -1,0 +1,8 @@
+<div id="user_nav">
+  <% if current_user %>
+      Signed in as <%=image_tag current_user.cover_image  %> <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", sign_out_path, method: "delete" %>
+  <% else %>
+      <%= link_to "Sign in with Facebook", "/auth/facebook", target: '_blank' %>
+  <% end %>
+</div>

@@ -14,7 +14,7 @@ gem 'will_paginate-bootstrap'
 gem 'prawn-rails'
 gem 'nokogiri'
 gem 'roo'
-
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'pg', '0.15.1'
