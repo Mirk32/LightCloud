@@ -4,10 +4,10 @@
       <div class="triangle-show pull-left"></div>
       <div class="triangle-hide pull-left"></div>
   <%end%>
-  <div class="col-sm-1">
+  <div class="col-xs-2 col-md-1">
     <%=image_tag avatar_get(message.user), class:'default-avatar'  %>
   </div>
-  <div class="col-sm-11  message">
+  <div class="col-xs-10 col-md-11  message">
     <span class="text-muted"><strong><%= message.user.name %></strong> on
       <%= l(message.created_at, format: '%B, %d %Y %H:%M:%S') %>
     </span>

@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
 
   def edit
     @message = Message.find(params[:id])
-    @parent_id = @message.parent.id
+    @message.parent.nil? ? @parent_id = '' : @parent_id = @message.parent.id
   end
 
   def update
