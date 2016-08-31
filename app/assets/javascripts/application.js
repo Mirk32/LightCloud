@@ -33,4 +33,17 @@ $(document).ready(function(){
         $(this).parent().next('.replies').show(200)
         $(this).parent().next('.replies').css({'overflow':'visible'})
     });
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        console.log(scroll)
+        if(scroll>600){
+            $('.scroll_up').fadeIn(300)
+        }
+        if(scroll<600){
+            $('.scroll_up').fadeOut(300)
+        }
+    });
+    $('.scroll_up').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
 });

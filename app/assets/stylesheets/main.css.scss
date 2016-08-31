@@ -73,7 +73,11 @@ h3 form{
 .reply_form{
   padding-top: 20px;
   margin-left: 34px;
+  display: none;
+}
 
+.reply_link{
+  margin-left: 15px;
 }
 
 .triangle-show{
@@ -101,4 +105,37 @@ h3 form{
 
 .replies .replies .replies .message, .replies .replies .replies .replies .message {
  padding-left: 50px;
+}
+
+.modal .btn-default{
+  margin-top: 16px;
+}
+
+.modal .modal-footer{
+  border: 0;
+}
+
+.scroll_up{
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(56, 63, 197, 0.09);
+  padding-top: 33%;
+  cursor: pointer;
+  a{
+    font-size: 21px;
+    text-decoration: none;
+    color:#000;
+  }
+}
+
+.scroll_up:hover{
+  background-color: rgba(56, 63, 197, 0.39);
+  transition: 1s;
+  a{
+    color:#fff;
+  }
 }

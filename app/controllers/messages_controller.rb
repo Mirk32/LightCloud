@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = Message.hash_tree(limit_depth: 5)
+
   end
 
   def create
@@ -33,7 +34,21 @@ class MessagesController < ApplicationController
     else                                                  # If message will have 5-th level we don't save it.
       @messages = Message.hash_tree(limit_depth: 5)
       flash[:danger] = "Sorry, no more than 5 descendants!"
+    end
+  end
 
+  def edit
+    @message = Message.find(params[:id])
+    @parent_id = @message.parent.id
+  end
+
+  def update
+    message = Message.find(params[:id])
+    if message.update_attributes(message_params)
+      @messages = Message.hash_tree(limit_depth: 5)
+      flash[:success] = "Your comment was successfully edited!"
+    else
+      flash[:danger] = "Your comment was successfully edited!"
     end
   end
 end

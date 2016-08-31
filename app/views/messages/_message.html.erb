@@ -14,7 +14,12 @@
       <p><%= message.content %></p>
   </div>
   <div class="pull-left">
+    <% if signed_in? %>
     <%= link_to 'Reply', new_message_path(parent_id: message.id), remote: true, class:'reply_link' %>
+    <%end%>
+    <% if message.user == current_user %>
+        <%= link_to 'Edit', edit_message_path(message), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#myModal', class:'edit_link'} %>
+    <%end%>
   </div>
   <!-- Displayed when user click on 'Reply' link-->
   <div class="col-sm-12">
