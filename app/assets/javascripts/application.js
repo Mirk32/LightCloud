@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+    $( '#vc-container' ).cassette();
+});
+
+$(document).ready(function(){
+
+   $('.triangle-show').click(function(){
+       $(this).hide()
+       $(this).next('.triangle-hide').show()
+       $(this).parent().next('.replies').hide(200)
+   });
+
+    $('.triangle-hide').click(function(){
+        $(this).hide()
+        $(this).prev('.triangle-show').show()
+        $(this).parent().next('.replies').show(200)
+        $(this).parent().next('.replies').css({'overflow':'visible'})
+    });
+});

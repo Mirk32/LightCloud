@@ -3,16 +3,20 @@
 </div>
 <div class="col-sm-8 col-sm-offset-2">
   <% unless current_user.nil?%>
-      <%=render('form')%>
+      <div class="row">
+        <h3>What do you think?
+            <span class="pull-right">
+                <%= button_to 'Logout', sign_out_path, method: "delete", class: 'btn fa fa-sign-out btn btn-success'%>
+            </span>
+        </h3>
+        <%=render('form')%>
+      </div>
   <%else%>
       <%=render('login_link')%>
   <%end%>
 
-  <div id="flash">
-    <%=render ('shared/flash_alert')%>
-  </div>
   <div id="messages">
-    <%=render @messages%>
+    <%= render 'messages' %> <!-- We need to split messages_tree_for method in partial beacause of AJAX rendering when user add new Reply message-->
   </div>
 </div>
 

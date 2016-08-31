@@ -11,4 +11,8 @@ module SessionsHelper
       "/assets/default-avatar-#{a}.png"
     end
   end
+
+  def signed_in?
+    !current_user.nil?
+  end
 end

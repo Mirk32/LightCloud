@@ -11,5 +11,6 @@ class SessionsController < ApplicationController
   end
 
   def index
+    redirect_to root_url if signed_in?
   end
 end

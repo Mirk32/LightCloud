@@ -1,0 +1,5 @@
+$('.reply_form').hide(); // Hide all openend Reply Forms
+$('.message-<%=@parent_id%> .reply_form').show(); // Show form  only for current message
+$('.message-<%=@parent_id%> .reply_form').html("<%= j (render 'form') %>");
+$('.reply_link').show();
+$('.message-<%=@parent_id%> .reply_link').hide(); // Hide 'Reply' link form message which have open Reply form in current time

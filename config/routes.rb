@@ -11,4 +11,6 @@ LightCloud::Application.routes.draw do
 
   match '/sign_out', to: 'sessions#destroy', via: 'delete'
 
+  get '/messages/new/(:parent_id)', to: 'messages#new', as: :parent_id
+
 end

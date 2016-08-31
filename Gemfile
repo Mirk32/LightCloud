@@ -4,17 +4,14 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
 gem 'sprockets'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.5.0'
 gem 'will_paginate', '3.0.4'
 gem 'will_paginate-bootstrap'
-gem 'prawn-rails'
-gem 'nokogiri'
-gem 'roo'
 gem 'omniauth-facebook'
+gem 'closure_tree'
 
 group :development, :test do
   gem 'pg', '0.15.1'
