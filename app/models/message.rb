@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-  belongs_to :user
+  acts_as_tree order: 'created_at DESC' #we need to tell our model that it should be nested.
 
-  #validate :content, presence: true, format: { with: /123/}
+  belongs_to :user
 end

@@ -1,14 +1,24 @@
-<div class="well row">
+<div class="well row message-<%=message.id%>">
+  <!-- Show triangle if message has some childrens -->
+  <% if message.children.size > 0%>
+      <div class="triangle-show pull-left"></div>
+      <div class="triangle-hide pull-left"></div>
+  <%end%>
   <div class="col-sm-1">
     <%=image_tag avatar_get(message.user), class:'default-avatar'  %>
   </div>
-  <div class="col-sm-11 col-sm-offset-0 message">
+  <div class="col-sm-11  message">
     <span class="text-muted"><strong><%= message.user.name %></strong> on
       <%= l(message.created_at, format: '%B, %d %Y %H:%M:%S') %>
     </span>
       <p><%= message.content %></p>
   </div>
   <div class="pull-left">
-    <a href="#">Reply</a>
+    <%= link_to 'Reply', new_message_path(parent_id: message.id), remote: true, class:'reply_link' %>
+  </div>
+  <!-- Displayed when user click on 'Reply' link-->
+  <div class="col-sm-12">
+    <div class="row reply_form">
+    </div>
   </div>
 </div>
