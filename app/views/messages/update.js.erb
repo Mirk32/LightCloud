@@ -1,20 +1,20 @@
 $("[data-dismiss=modal]").trigger({ type: "click" });
 $('#messages').html("<%= j (render 'messages') %>");
 $('#flash').html("<%= j (render 'shared/flash_alert') %>");
-$('#flash').fadeIn(500)
+$('#flash').fadeIn(500);
 $('.glyphicon-remove').click(function(){
-    $(this).parent().hide()
+    $(this).parent().hide();
 });
 
 $('.triangle-show').click(function(){
-    $(this).hide()
-    $(this).next('.triangle-hide').show()
-    $(this).parent().next('.replies').hide(200)
+    $(this).hide();
+    $(this).next('.triangle-hide').show();
+    $(this).parent().next('.replies').hide(200);
 });
 
 $('.triangle-hide').click(function(){
-    $(this).hide()
-    $(this).prev('.triangle-show').show()
-    $(this).parent().next('.replies').show(200)
-    $(this).parent().next('.replies').css({'overflow':'visible'})
+    $(this).hide();
+    $(this).prev('.triangle-show').show();
+    $(this).parent().next('.replies').show(200);
+    $(this).parent().next('.replies').css({'overflow':'visible'});
 });

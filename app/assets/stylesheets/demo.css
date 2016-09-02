@@ -1,15 +1,6 @@
-@import url('../../../../../Misha/Полезности/CassettePlayer/css/normalize.css');
+@import url('normalize.css');
 /* Icon font for player controls */
-/*@font-face {*/
-	/*font-family: 'playericons';*/
-	/*src: 	url("../../../../../Misha/Полезности/CassettePlayer/css/fonts/playericons.eot");*/
-	/*src: 	url("../../../../../Misha/Полезности/CassettePlayer/css/fonts/playericons.eot?#iefix") format('embedded-opentype'),*/
-		/*url("../../../../../Misha/Полезности/CassettePlayer/css/fonts/playericons.woff") format('woff'),*/
-		/*url("../../../../../Misha/Полезности/CassettePlayer/css/fonts/playericons.ttf") format('truetype'),*/
-		/*url("../../../../../Misha/Полезности/CassettePlayer/css/fonts/playericons.svg#playericons") format('svg');*/
-	/*font-weight: normal;*/
-	/*font-style: normal;*/
-/*}*/
+
 /* General Demo Style */
 
 body{
@@ -81,7 +72,6 @@ a:hover{
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
-	
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;

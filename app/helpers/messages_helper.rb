@@ -6,10 +6,10 @@ module MessagesHelper
           if nested_messages.size > 0 # heck if there are any more nested comments for current message
             nested_messages = Hash[nested_messages.to_a.reverse] # Comments for message should be reversed,
                                                                 # so we convert hash into array, reverse it and convert back into hash
-             content_tag(:div, messages_tree_for(nested_messages), class: "replies") # wrap nested comment into dav.replies
+            content_tag(:div, messages_tree_for(nested_messages), class: "replies") # wrap nested comment into div.replies
           else
-               nil # stop recursion f there is no more nested comments
-           end
+            nil # stop recursion if there is no more nested comments
+          end
     end.join.html_safe
   end
 end
